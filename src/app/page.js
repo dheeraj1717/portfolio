@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="font-raleway">
       <Navbar />
-      <div>
+      <div className="max-w-[1400px] mx-auto 2xl:mt-32">
         <section id="profile">
           <Hero />
         </section>
