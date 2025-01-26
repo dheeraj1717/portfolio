@@ -6,12 +6,15 @@ import { Navbar } from "./_components/navbar";
 import { Navigation } from "./_components/navigation";
 import { Projects } from "./_components/projects";
 import { Socials } from "./_components/socials";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 export default function Home() {
   return (
     <div className="font-raleway">
       <Navbar />
-      <div className="max-w-[1400px] mx-auto 2xl:mt-32">
+      <div className="max-w-[1400px] mx-auto">
         <section id="profile">
           <Hero />
         </section>

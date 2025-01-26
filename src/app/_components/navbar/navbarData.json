@@ -1,8 +1,8 @@
 {
   "navbarLinks": [
-    { "name": "Profile", "href": "/" },
-    { "name": "Experience", "href": "/about" },
-    { "name": "Projects", "href": "/about" },
+    { "name": "Profile", "href": "/profile" },
+    { "name": "Experience", "href": "/experience" },
+    { "name": "Projects", "href": "/projects" },
     { "name": "Contact", "href": "/contact" }
   ]
 }

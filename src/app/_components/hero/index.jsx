@@ -1,8 +1,9 @@
+import { BackgroundBeams } from "@/app/ui/background-beams";
 import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <div className="flex justify-center items-center px-32 gap-16 min-h-screen 2xl:min-h-max">
+    <div className="flex justify-center items-center px-32 gap-16 min-h-[70vh]">
       <div className="w-1/2 flex justify-end items-end flex-col">
         <div className="max-w-[450px] ">
           <h1 className="text-[24px] font-bold leading-7">
@@ -23,15 +24,16 @@ export const Hero = () => {
         </div>
       </div>
       <div className="w-1/2 relative">
-        <div className="absolute h-[420px] w-[420px] bg-[#26292a] top-0 left-0 translate-x-24 translate-y-24 z-0"></div>
+        <div className="absolute h-[390px] w-[390px] bg-[#26292a] top-0 left-0 translate-x-24 translate-y-24 z-0"></div>
         <Image
           src="/Mypic.jpeg"
-          width={450}
-          height={450}
+          width={400}
+          height={400}
           alt="hero image"
           className="relative z-10"
         />
       </div>
+      <BackgroundBeams/>
     </div>
   );
 };

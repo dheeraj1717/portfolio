@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Streamerr",
+      "description": "A platform supporting live video streaming using NextJs, React, Prisma, Tailwind, and MongoDB.",
+      "image": "/boxby3.jpg",
+      "technologies": ["Next.js", "React", "Prisma", "Tailwind", "MongoDB", "Node.js", "Express.js"],
+      "github": "https://github.com/dheerajkumar/Streamerr",
+      "demo": "https://github.com/dheerajkumar/Streamerr"
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "description": "Description of Project 2.",
+      "image": "/project2.jpg",
+      "technologies": ["React", "Tailwind", "Node.js"],
+      "github": "https://github.com/dheerajkumar/Project2",
+      "demo": "https://github.com/dheerajkumar/Project2"
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "description": "Description of Project 3.",
+      "image": "/project3.jpg",
+      "technologies": ["Express", "MongoDB", "Next.js"],
+      "github": "https://github.com/dheerajkumar/Project3",
+      "demo": "https://github.com/dheerajkumar/Project3"
+    }
+  ]
+  

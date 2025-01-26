@@ -26,7 +26,14 @@ export const Navigation = () => {
   }, []);
 
   const handleNavigation = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+    const target = document.getElementById(section);
+    const navbarHeight = 100; // Adjust this value to match your navbar height
+    const position = target.offsetTop - navbarHeight;
+
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
   };
 
   return (
