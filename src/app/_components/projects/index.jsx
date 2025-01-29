@@ -15,11 +15,11 @@ export const Projects = () => {
   return (
     <div className="max-w-[1200px] mx-auto">
       <h1 className="text-center text-4xl font-bold mb-14">Projects</h1>
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 justify-center mx-auto">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col gap-4 w-[380px] h-[440px] rounded-md shadow-lg relative"
+            className="flex flex-col gap-4 max-w-[330px] sm:w-[380px] h-[440px] rounded-md shadow-lg relative mx-auto"
           >
             {/* Image Section */}
             <div className="relative w-full h-[250px] overflow-hidden rounded-md group">
@@ -53,7 +53,7 @@ export const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 transition"
+                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 hover:text-primary-500 transition"
               >
                 <BiLogoGithub size={20} /> GitHub
               </a>
@@ -61,7 +61,7 @@ export const Projects = () => {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 transition"
+                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 hover:text-primary-500 transition"
               >
                 <FaTowerBroadcast size={20} /> Live Demo
               </a>

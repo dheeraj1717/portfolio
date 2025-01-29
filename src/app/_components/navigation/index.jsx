@@ -37,7 +37,7 @@ export const Navigation = () => {
   };
 
   return (
-    <ul className="fixed top-1/2 transform -translate-y-1/2 space-y-4 left-[20px]">
+    <ul className="fixed top-1/2 transform -translate-y-1/2 space-y-4 left-[10px] sm:left-[20px]">
       {["profile", "experience", "projects", "contact"].map((section) => (
         <li
           key={section}
@@ -47,8 +47,8 @@ export const Navigation = () => {
           <span
             className={`block transition-all duration-300 ${
               activeSection === section
-                ? "w-10 h-[2px] bg-white" 
-                : "w-6 hover:w-8 h-[2px] bg-gray-400 opacity-50" 
+                ? "w-8 sm:w-10 h-[2px] bg-white" 
+                : "w-6 hover:w-6 sm:hover:w-8 h-[2px] bg-gray-400 opacity-50" 
             } `} 
           />
         </li>

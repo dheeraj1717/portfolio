@@ -27,28 +27,28 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="mx-auto py-10 px-4 max-w-[1200px] 2xl:my-20">
-      <h1 className="text-center text-4xl font-bold mb-10">Experience</h1>
+    <div className="mx-auto py-10 px-4 max-w-[1200px] 2xl:my-20 mt-12 lg:mt-0">
+      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-10">Experience</h1>
 
       {/* Central Vertical Line */}
       <div className="relative">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full border-r-2 border-gray-300"></div>
+        <div className="absolute top-0 left-12 sm:left-1/2 transform -translate-x-1/2 h-full border-r-2 border-gray-300"></div>
 
         {experiences.map((exp, index) => (
           <div
             key={index}
             className={`relative mb-10 flex ${
-              index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              index % 2 === 0 ? "sm:flex-row-reverse" : "flex-row"
             } items-start`}
           >
             {/* Circle icon */}
-            <div className="w-6 h-6 bg-primary-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white">
+            <div className="w-6 h-6 bg-primary-500 rounded-full absolute left-12 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white">
               <Briefcase size={24} />
             </div>
 
             {/* Experience Card */}
             <div
-              className={`bg-[#26292a] p-6 rounded-lg w-5/12 ${
+              className={`bg-[#26292a] p-6 rounded-lg w-[85%] ml-16 sm:ml-0 sm:w-5/12 ${
                 index % 2 === 0 ? "ml-2" : "mr-2"
               }`}
             >

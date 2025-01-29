@@ -5,9 +5,9 @@ import { BackgroundBeamsWithCollision } from "@/app/ui/background-beams-with-col
 
 export const Contact = () => {
   return (
-    <div className="relative pl-20">
-      <h1 className="text-3xl font-bold mt-14 mb-2">Contact!</h1>
-      <p className="text-[#9b9c9d] max-w-[400px]">
+    <div className="relative pl-16 sm:pl-20 pt-5">
+      <h1 className="text-2xl sm:text-3xl font-bold mt-14 mb-2">Contact!</h1>
+      <p className="text-[#9b9c9d] max-w-[320px] sm:max-w-[400px]">
         Feel free to reach out if you want to build something together, have a question, or just want to connect.
       </p>
       
@@ -32,7 +32,7 @@ export const Contact = () => {
         </a>
       </div>
 
-      <p className="text-[14px] w-full text-center mb-4 mt-[400px]">
+      <p className="text-[14px] w-full text-center mb-4 mt-[320px] sm:mt-[400px]">
         Handcrafted by me © 2025.
       </p>
       <BackgroundBeamsWithCollision className="absolute top-0 left-0 w-full h-full"/>

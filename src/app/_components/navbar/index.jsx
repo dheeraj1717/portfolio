@@ -47,9 +47,11 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-full z-50 text-primary-100 py-5">
-      <div className="max-w-[1600px] mx-auto px-4 lg:px-20">
-        <nav className="w-full md:h-20 h-16 flex items-center justify-between text-[16px]">
+    <nav className="w-full z-[1000] text-primary-100 py-5 bg-primary-500">
+      {" "}
+      {/* Ensure high z-index */}
+      <div className="max-w-[1600px] mx-auto px-4 lg:px-20 relative">
+        <nav className="w-full md:h-20 h-16 flex items-center justify-between text-[16px] relative z-[1000]">
           <div className="flex items-center justify-between w-full">
             <div className="flex flex-col decoration-transparent cursor-pointer">
               <p className="text-[22px]">Dheeraj</p>
@@ -63,17 +65,17 @@ export const Navbar = () => {
                     onClick={() => handleNavigation(link.href.substring(1))}
                     className={`flex items-center gap-2 py-2 px-3 transition-colors duration-300 ${
                       activeSection === link.href.substring(1)
-                        ? " opacity-100"
+                        ? "opacity-100"
                         : "opacity-60 hover:opacity-100 hover:transition-colors duration-300"
                     }`}
                   >
                     {link.name}
                   </button>
                   <span
-                    className={`${
+                    className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-[2px] bg-[#ab4e4f] transition-all duration-300 ${
                       activeSection === link.href.substring(1)
-                        ? "w-[85%] absolute left-2 bottom-0 h-[2px] bg-[#ab4e4f] transition-all duration-300"
-                        : "w-0 group-hover:w-[80%]"
+                        ? "w-[85%]"
+                        : "w-0 group-hover:w-[85%]"
                     }`}
                   ></span>
                 </li>
@@ -82,7 +84,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-              <ul className="flex flex-col lg:hidden rounded-[16px] gap-y-1 p-4 bg-primary-500 leading-[29px] overflow-y-scroll max-h-screen z-20 absolute left-0 md:top-24 top-16 w-screen">
+              <ul className="flex flex-col lg:hidden rounded-[16px] gap-y-1 p-4 bg-primary-500 leading-[29px] overflow-y-scroll max-h-screen z-[1000] absolute left-0 md:top-24 top-16 w-screen">
                 {navLinks.navbarLinks.map((link, index) => (
                   <li key={index} className="relative">
                     <button
