@@ -10,8 +10,8 @@
     },
     {
       "id": 2,
-      "title": "Project 2",
-      "description": "Description of Project 2.",
+      "title": "TopicTree",
+      "description": "A dynamic post-loading platform created with React.js, Next.js, TypeScript, Prisma, Tailwind CSS, Shadcn UI, and NextAuth.js.",
       "image": "/project2.jpg",
       "technologies": ["React", "Tailwind", "Node.js"],
       "github": "https://github.com/dheerajkumar/Project2",
@@ -19,8 +19,8 @@
     },
     {
       "id": 3,
-      "title": "Project 3",
-      "description": "Description of Project 3.",
+      "title": "Luxora",
+      "description": "E-commerce platform using MERN stack and Redux for state management.",
       "image": "/project3.jpg",
       "technologies": ["Express", "MongoDB", "Next.js"],
       "github": "https://github.com/dheerajkumar/Project3",

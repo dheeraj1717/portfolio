@@ -15,11 +15,11 @@ export const Projects = () => {
   return (
     <div className="max-w-[1200px] mx-auto">
       <h1 className="text-center text-4xl font-bold mb-14">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 justify-center mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 md:gap-6 justify-center mx-auto">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col gap-4 max-w-[330px] sm:w-[380px] h-[440px] rounded-md shadow-lg relative mx-auto"
+            className="flex flex-col gap-4 max-w-[300px] sm:w-[380px] h-[440px] rounded-md shadow-lg relative mx-auto"
           >
             {/* Image Section */}
             <div className="relative w-full h-[250px] overflow-hidden rounded-md group">
@@ -30,7 +30,7 @@ export const Projects = () => {
                 className="object-cover rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3">
+              {/* <div className="absolute inset-0 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3">
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
@@ -39,7 +39,7 @@ export const Projects = () => {
                     {tech}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
             {/* Project Info */}
            <div className="flex flex-col gap-3 px-2">

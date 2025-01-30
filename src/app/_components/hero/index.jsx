@@ -21,9 +21,9 @@ export const Hero = () => {
     },
   ];
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-16  md:px-32 gap-16 min-h-[70vh]">
+    <div className="flex flex-col md:flex-row justify-center items-center px-14 sm:px-16  md:px-32 gap-16 min-h-[70vh]">
       <div className="md:w-1/2 flex justify-end items-end flex-col">
-        <div className="max-w-[450px] ">
+        <div className="max-w-[450px] z-10">
           <h1 className="text-[24px] font-bold leading-7">
             Hello, <br /> My name is Dheeraj
           </h1>
@@ -50,7 +50,7 @@ export const Hero = () => {
           width={400}
           height={400}
           alt="hero image"
-          className="absolute top-10 md:top-14 left-10 md:left-16 z-0 w-[320px] h-[300px] md:w-[400px] md:h-[400px]"
+          className="absolute top-10 md:top-14 left-10 md:left-16 z-0 w-[320px] h-[320px] md:w-[400px] md:h-[400px]"
         />
 
         {/* Profile Image */}

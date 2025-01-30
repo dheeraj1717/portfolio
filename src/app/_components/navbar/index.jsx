@@ -54,8 +54,8 @@ export const Navbar = () => {
         <nav className="w-full md:h-20 h-16 flex items-center justify-between text-[16px] relative z-[1000]">
           <div className="flex items-center justify-between w-full">
             <div className="flex flex-col decoration-transparent cursor-pointer">
-              <p className="text-[22px]">Dheeraj</p>
-              <h3 className="text-[30px] leading-[28px]">Jangid.</h3>
+              <p className="text-[18px] sm:text-[22px]">Dheeraj</p>
+              <h3 className="text-[24px] sm:text-[30px] leading-[28px]">Jangid.</h3>
             </div>
 
             <ul className="hidden lg:flex flex-col lg:flex-row lg:items-center rounded-[16px] gap-y-1 lg:space-x-8 p-4 lg:p-0 lg:bg-transparent leading-[29px]">
