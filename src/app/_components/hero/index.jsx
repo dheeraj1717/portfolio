@@ -1,27 +1,68 @@
+"use client";
+
 import { BackgroundBeams } from "@/app/ui/background-beams";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import {
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiMysql,
+  SiGithub,
+} from "react-icons/si";
 
 export const Hero = () => {
   const words = [
-    {
-      text: "Build",
-    },
-    {
-      text: "awesome",
-    },
-    {
-      text: "apps",
-    },
-    {
-      text: "with",
-    },
-    {
-      text: "Aceternity.",
-      className: "text-blue-500 dark:text-blue-500",
-    },
+    { name: "React", icon: <SiReact /> },
+    { name: "HTML", icon: <SiHtml5 /> },
+    { name: "CSS", icon: <SiCss3 /> },
+    { name: "JavaScript", icon: <SiJavascript /> },
+    { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Node.js", icon: <SiNodedotjs /> },
+    { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "MySQL", icon: <SiMysql /> },
+    { name: "GitHub", icon: <SiGithub /> },
   ];
+
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentWord = words[currentWordIndex].name;
+
+    const typingSpeed = isDeleting ? 50 : 100;
+    const nextStepDelay = isDeleting ? 50 : 150;
+    const waitBeforeDelete = 1000;
+
+    const typeEffect = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayedText(currentWord.substring(0, charIndex + 1));
+        setCharIndex((prev) => prev + 1);
+
+        if (charIndex + 1 === currentWord.length) {
+          setTimeout(() => setIsDeleting(true), waitBeforeDelete);
+        }
+      } else {
+        setDisplayedText(currentWord.substring(0, charIndex - 1));
+        setCharIndex((prev) => prev - 1);
+
+        if (charIndex === 0) {
+          setIsDeleting(false);
+          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, isDeleting ? nextStepDelay : typingSpeed);
+
+    return () => clearTimeout(typeEffect);
+  }, [charIndex, isDeleting, currentWordIndex]);
+
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-14 sm:px-16  md:px-32 gap-16 min-h-[70vh]">
+    <div className="flex flex-col md:flex-row justify-center items-center px-14 sm:px-16 md:px-32 gap-16 min-h-[70vh]">
       <div className="md:w-1/2 flex justify-end items-end flex-col">
         <div className="max-w-[450px] z-10">
           <h1 className="text-[24px] font-bold leading-7">
@@ -43,24 +84,12 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 relative">
-        {/* Background Image */}
-        <Image
-          src="/graybg.png"
-          width={400}
-          height={400}
-          alt="hero image"
-          className="absolute top-10 md:top-14 left-10 md:left-16 z-0 w-[320px] h-[320px] md:w-[400px] md:h-[400px]"
-        />
 
-        {/* Profile Image */}
-        <Image
-          src="/Mypic.jpeg"
-          width={400}
-          height={400}
-          alt="hero image"
-          className="relative z-10 w-[320px] h-[300px] md:w-[400px] md:h-[400px]"
-        />
+      {/* Typewriter Effect Section with Icons */}
+      <div className="md:w-1/2 flex justify-center items-center text-6xl font-medium text-blue-500 gap-4">
+        {words[currentWordIndex].icon}
+        {displayedText}
+        <span className="blinking-cursor">|</span>
       </div>
 
       <BackgroundBeams />

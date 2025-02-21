@@ -22,12 +22,12 @@ export const Projects = () => {
             className="flex flex-col gap-4 max-w-[300px] sm:w-[380px] h-[440px] rounded-md shadow-lg relative mx-auto"
           >
             {/* Image Section */}
-            <div className="relative w-full h-[250px] overflow-hidden rounded-md group">
+            <div className="relative w-full h-[230px] overflow-hidden rounded-md group">
               <Image
                 src={project.image}
                 fill
                 alt={project.title}
-                className="object-cover rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="object-cover aspect-square rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
               {/* Overlay */}
               {/* <div className="absolute inset-0 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3">
