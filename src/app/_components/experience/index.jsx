@@ -49,7 +49,7 @@ export const Experience = () => {
             {/* Experience Card */}
             <div
               className={`bg-[#26292a] p-6 rounded-lg w-[85%] ml-16 sm:ml-0 sm:w-5/12 ${
-                index % 2 === 0 ? "ml-2" : "mr-2"
+                index % 2 === 0 ? "ml-16" : "mr-2"
               }`}
             >
               <h2 className="text-[#b84042] text-xl font-semibold ">

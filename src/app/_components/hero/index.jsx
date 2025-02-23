@@ -39,24 +39,27 @@ export const Hero = () => {
     const nextStepDelay = isDeleting ? 50 : 150;
     const waitBeforeDelete = 1000;
 
-    const typeEffect = setTimeout(() => {
-      if (!isDeleting) {
-        setDisplayedText(currentWord.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
+    const typeEffect = setTimeout(
+      () => {
+        if (!isDeleting) {
+          setDisplayedText(currentWord.substring(0, charIndex + 1));
+          setCharIndex((prev) => prev + 1);
 
-        if (charIndex + 1 === currentWord.length) {
-          setTimeout(() => setIsDeleting(true), waitBeforeDelete);
-        }
-      } else {
-        setDisplayedText(currentWord.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
+          if (charIndex + 1 === currentWord.length) {
+            setTimeout(() => setIsDeleting(true), waitBeforeDelete);
+          }
+        } else {
+          setDisplayedText(currentWord.substring(0, charIndex - 1));
+          setCharIndex((prev) => prev - 1);
 
-        if (charIndex === 0) {
-          setIsDeleting(false);
-          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          if (charIndex === 0) {
+            setIsDeleting(false);
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          }
         }
-      }
-    }, isDeleting ? nextStepDelay : typingSpeed);
+      },
+      isDeleting ? nextStepDelay : typingSpeed
+    );
 
     return () => clearTimeout(typeEffect);
   }, [charIndex, isDeleting, currentWordIndex]);
@@ -70,9 +73,8 @@ export const Hero = () => {
           </h1>
           <div className="leading-6 tracking-wide mt-5 text-[#fff9] text-[14px] sm:text-[16px] flex flex-col gap-2">
             <p>
-              I’m a MERN Stack Developer passionate about creating dynamic,
-              high-performance web applications. With expertise in React.js,
-              Node.js, Express.js, and MongoDB, I specialize in building
+              I’m a Full Stack Developer passionate about creating dynamic,
+              high-performance web applications.I specialize in building
               seamless, user-friendly digital experiences.
             </p>
             <p>
@@ -81,6 +83,11 @@ export const Hero = () => {
               finesse or backend logic, I love crafting solutions that make an
               impact.
             </p>
+          </div>
+          <div className="mt-5">
+            <a href="https://drive.google.com/file/d/1AHRjteTIHkaqP0iS-Vh87HhvsxMREEkp/view" target="_blank" className="mt-5 py-2 px-4 border font-medium border-[#fff9] hover:bg-[#fff] hover:text-black rounded-sm hover:transition-all delay-100 inline-block cursor-pointer">
+              Resume
+            </a>
           </div>
         </div>
       </div>

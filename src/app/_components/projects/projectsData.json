@@ -3,10 +3,10 @@
       "id": 1,
       "title": "Streamerr",
       "description": "A platform supporting live video streaming using NextJs, React, Prisma, Tailwind, and MongoDB.",
-      "image": "/boxby3.jpg",
+      "image": "/Streamerr.png",
       "technologies": ["Next.js", "React", "Prisma", "Tailwind", "MongoDB", "Node.js", "Express.js"],
-      "github": "https://github.com/dheerajkumar/Streamerr",
-      "demo": "https://github.com/dheerajkumar/Streamerr"
+      "github": "https://github.com/dheeraj1717/streamerr",
+      "demo": "https://streamerr.vercel.app/"
     },
     {
       "id": 2,
@@ -14,8 +14,8 @@
       "description": "A dynamic post-loading platform created with React.js, Next.js, TypeScript, Prisma, Tailwind CSS, Shadcn UI, and NextAuth.js.",
       "image": "/TopicTree.png",
       "technologies": ["React", "Tailwind", "Node.js"],
-      "github": "https://github.com/dheerajkumar/Project2",
-      "demo": "https://github.com/dheerajkumar/Project2"
+      "github": "https://github.com/dheeraj1717/TopicTree",
+      "demo": "https://topic-tree.vercel.app/"
     },
     {
       "id": 3,
@@ -23,8 +23,8 @@
       "description": "E-commerce platform using MERN stack and Redux for state management.",
       "image": "/image.png",
       "technologies": ["Express", "MongoDB", "Next.js"],
-      "github": "https://github.com/dheerajkumar/Project3",
-      "demo": "https://github.com/dheerajkumar/Project3"
+      "github": "https://github.com/dheeraj1717/luxora",
+      "demo": "https://luxora-one.vercel.app/"
     }
   ]
   
