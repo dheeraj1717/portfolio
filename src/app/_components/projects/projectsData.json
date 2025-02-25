@@ -13,7 +13,7 @@
       "title": "TopicTree",
       "description": "A dynamic post-loading platform created with React.js, Next.js, TypeScript, Prisma, Tailwind CSS, Shadcn UI, and NextAuth.js.",
       "image": "/TopicTree.png",
-      "technologies": ["React", "Tailwind", "Node.js"],
+      "technologies": ["NextJS", "Tailwind CSS", "TypeScript", "Prisma", "Shadcn UI", "NextAuth.js"],
       "github": "https://github.com/dheeraj1717/TopicTree",
       "demo": "https://topic-tree.vercel.app/"
     },
@@ -22,9 +22,18 @@
       "title": "Luxora",
       "description": "E-commerce platform using MERN stack and Redux for state management.",
       "image": "/image.png",
-      "technologies": ["Express", "MongoDB", "Next.js"],
+      "technologies": ["ReactJS", "Redux", "Tailwind CSS", "Node.js", "MongoDB"],
       "github": "https://github.com/dheeraj1717/luxora",
       "demo": "https://luxora-one.vercel.app/"
+    },
+    {
+      "id": 4,
+      "title": "Admin Dashboard",
+      "description": "A react admin dashboard using ReactJs and Material UI.",
+      "image": "/adminDashboard.png",
+      "technologies": ["ReactJS", "Material UI", "Nivo Charts", "Formik"],
+      "github": "https://github.com/dheeraj1717/React-Admin-Dashboard",
+      "demo": "https://admin-dashboard-taupe-omega-91.vercel.app/"
     }
   ]
   
