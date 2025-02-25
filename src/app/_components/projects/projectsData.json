@@ -29,7 +29,7 @@
     {
       "id": 4,
       "title": "Admin Dashboard",
-      "description": "A react admin dashboard using ReactJs and Material UI.",
+      "description": "An admin dashboard using ReactJs and Material UI.",
       "image": "/adminDashboard.png",
       "technologies": ["ReactJS", "Material UI", "Nivo Charts", "Formik"],
       "github": "https://github.com/dheeraj1717/React-Admin-Dashboard",
