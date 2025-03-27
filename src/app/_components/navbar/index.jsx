@@ -84,7 +84,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-              <ul className="flex flex-col lg:hidden rounded-[16px] gap-y-1 p-4 bg-primary-500 leading-[29px] overflow-y-scroll max-h-screen z-[1000] absolute left-0 md:top-24 top-16 w-screen">
+              <ul className="flex flex-col lg:hidden rounded-[16px] gap-y-1 p-4 bg-primary-500 leading-[29px] overflow-y-scroll  max-h-screen z-[1000] absolute left-0 md:top-24 top-16 w-full">
                 {navLinks.navbarLinks.map((link, index) => (
                   <li key={index} className="relative">
                     <button
