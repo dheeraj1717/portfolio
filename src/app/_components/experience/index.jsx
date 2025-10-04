@@ -3,6 +3,18 @@ import { Briefcase, Calendar } from "lucide-react";
 export const Experience = () => {
   const experiences = [
     {
+      company: "The Thinktech",
+      role: "Associate Software Developer",
+      date: "June 2025 - Present",
+      details: [
+        "Contributing to the development of two large-scale multilingual platforms – a Learning Management System (LMS) and an Insurance CRM supporting multiple insurance products, designed for 20,000+ insurance agents.",
+        "Building responsive and scalable frontend applications using React, Vite, TypeScript, and Tailwind CSS.",
+        "Ensuring application quality through manual testing and automated unit/integration tests with Jest and React Testing Library.",
+        "Involved in requirement gathering and clarifying product needs.",
+        "Preparing training documents and onboarding materials for internal teams.",
+      ],
+    },
+    {
       company: "Virtust Technologies",
       role: "Front End Developer",
       date: "July 2024 - Sept 2024",
@@ -28,7 +40,9 @@ export const Experience = () => {
 
   return (
     <div className="mx-auto py-10 px-4 max-w-[1200px] 2xl:my-20 mt-12 lg:mt-0">
-      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-10">Experience</h1>
+      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-10">
+        Experience
+      </h1>
 
       {/* Central Vertical Line */}
       <div className="relative">
