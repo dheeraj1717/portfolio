@@ -6,7 +6,7 @@ import { Spotlight } from "../ui/Background";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative w-full overflow-hidden py-20 md:py-0">
+    <div className="flex flex-col items-center justify-center min-h-screen relative w-full overflow-hidden pb-5 sm:pb-20 py-20 md:py-0">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -17,7 +17,7 @@ export const Hero = () => {
              <span className="text-neutral-300 text-sm font-medium tracking-wide">Available for new projects</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500 tracking-tight mb-6">
+          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500 tracking-tight mb-6 pb-2">
             Dheeraj Jangid
           </h1>
           

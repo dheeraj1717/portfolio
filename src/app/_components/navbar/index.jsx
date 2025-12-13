@@ -76,9 +76,9 @@ export const Navbar = () => {
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
         
-        {/* Mobile Dropdown */}
+       {/* Mobile Dropdown */}
         {isOpen && (
-           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] glass-panel rounded-2xl p-4 flex flex-col gap-2 md:hidden">
+           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex flex-col gap-2 md:hidden">
               {navLinks.navbarLinks.map((link, index) => (
                 <button
                   key={index}

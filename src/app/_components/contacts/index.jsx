@@ -6,7 +6,7 @@ import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 export const Contact = () => {
   return (
     <div className="min-h-[50vh] flex flex-col justify-center items-center relative py-20">
-      <div className="glass-panel p-10 rounded-3xl text-center max-w-[600px] mx-4 relative z-10 hover:bg-white/5 transition-colors duration-500">
+      <div className="glass-panel p-4 sm:p-10 rounded-3xl text-center max-w-[600px] mx-4 relative hover:bg-white/5 transition-colors duration-500">
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400">Get In Touch</h1>
         <p className="text-neutral-400 text-lg mb-8 leading-relaxed">
           Feel free to reach out if you want to build something together, have a

@@ -39,7 +39,7 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="mx-auto py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
+    <div className="mx-auto py-5 sm:py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
       <h1 className="text-center text-4xl sm:text-5xl font-bold mb-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         Experience
       </h1>
@@ -63,7 +63,7 @@ export const Experience = () => {
 
             {/* Experience Card */}
             <div
-              className={`glass-panel p-8 rounded-2xl w-[85%] ml-20 sm:ml-0 sm:w-5/12 border-white/5 hover:border-blue-500/30 transition-all duration-300 group hover:bg-white/5 ${
+              className={`glass-panel p-4 sm:p-8 rounded-2xl w-[85%] ml-20 sm:ml-0 sm:w-5/12 border-white/5 hover:border-blue-500/30 transition-all duration-300 group hover:bg-white/5 ${
                 index % 2 === 0 ? "sm:ml-16" : "sm:mr-16"
               }`}
             >
