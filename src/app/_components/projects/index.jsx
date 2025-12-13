@@ -4,6 +4,7 @@ import Image from "next/image";
 import { BiLogoGithub } from "react-icons/bi";
 import { FaTowerBroadcast } from "react-icons/fa6";
 import projectsData from "./projectsData.json";
+import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -13,60 +14,62 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="max-w-[1200px] mx-auto">
-      <h1 className="text-center text-4xl font-bold mb-14">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 md:gap-6 justify-center mx-auto">
+    <div className="max-w-[1200px] mx-auto py-10 px-4">
+      <h1 className="text-center text-5xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Projects</h1>
+      <div className="flex flex-wrap items-center justify-center gap-8 mx-auto">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="flex flex-col gap-4 max-w-[300px] sm:w-[380px] h-[440px] rounded-md shadow-lg relative mx-auto"
-          >
-            {/* Image Section */}
-            <div className="relative w-full h-[230px] overflow-hidden rounded-md group">
-              <Image
-                src={project.image}
-                fill
-                alt={project.title}
-                className="object-cover aspect-square rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
-              />
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3">
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="text-sm text-white border border-white px-2 py-1 rounded-full hover:text-black hover:bg-white transition-colors duration-300 cursor-pointer"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div> */}
-            </div>
-            {/* Project Info */}
-           <div className="flex flex-col gap-3 px-2">
-           <h2 className="text-xl font-bold">{project.title}</h2>
-            <p className="text-sm flex-1">{project.description}</p>
-           
-            </div>
-             {/* Action Buttons */}
-             <div className="flex gap-4 text-sm absolute bottom-4 px-2">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 hover:text-primary-500 transition"
-              >
-                <BiLogoGithub size={20} /> GitHub
-              </a>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-2 hover:bg-gray-200 hover:text-primary-500 transition"
-              >
-                <FaTowerBroadcast size={20} /> Live Demo
-              </a>
-           </div>
-          </div>
+          <CardContainer key={project.id} className="inter-var border border-white/10 hover:border-blue-500/70 transition-all duration-300 p-6 rounded-xl">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black w-auto sm:w-[30rem] h-auto">
+                  <div className="w-full h-full flex flex-col">
+                    <CardItem
+                        translateZ="50"
+                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                    >
+                        {project.title}
+                    </CardItem>
+                    <CardItem
+                        as="p"
+                        translateZ="60"
+                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                    >
+                        {project.description}
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-full mt-4">
+                        <Image
+                        src={project.image}
+                        height="1000"
+                        width="1000"
+                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                        alt={project.title}
+                        />
+                    </CardItem>
+                    <div className="flex justify-between items-center mt-20">
+                        <CardItem
+                        translateZ={20}
+                        as="a"
+                        href={project.demo}
+                        target="__blank"
+                        className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                        >
+                        <div className="flex items-center gap-2">
+                            <FaTowerBroadcast /> Try now →
+                        </div>
+                        </CardItem>
+                        <CardItem
+                        translateZ={20}
+                        as="a"
+                        href={project.github}
+                        target="__blank"
+                        className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                        >
+                        <div className="flex items-center gap-2">
+                            <BiLogoGithub /> GitHub
+                        </div>
+                        </CardItem>
+                    </div>
+                  </div>
+            </CardBody>
+          </CardContainer>
         ))}
       </div>
     </div>

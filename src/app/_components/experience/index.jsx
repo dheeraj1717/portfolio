@@ -39,45 +39,56 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="mx-auto py-10 px-4 max-w-[1200px] 2xl:my-20 mt-12 lg:mt-0">
-      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-10">
+    <div className="mx-auto py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
+      <h1 className="text-center text-4xl sm:text-5xl font-bold mb-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         Experience
       </h1>
 
       {/* Central Vertical Line */}
       <div className="relative">
-        <div className="absolute top-0 left-12 sm:left-1/2 transform -translate-x-1/2 h-full border-r-2 border-gray-300"></div>
+        <div className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"></div>
+        <div className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-blue-400 blur-sm"></div>
 
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`relative mb-10 flex ${
+            className={`relative mb-16 flex ${
               index % 2 === 0 ? "sm:flex-row-reverse" : "flex-row"
-            } items-start`}
+            } items-center`}
           >
             {/* Circle icon */}
-            <div className="w-6 h-6 bg-primary-500 rounded-full absolute left-12 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white">
-              <Briefcase size={24} />
+            <div className="w-10 h-10 rounded-full absolute left-8 sm:left-1/2 transform -translate-x-1/2 bg-black border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.5)] flex items-center justify-center text-blue-400 z-10">
+              <Briefcase size={20} />
             </div>
 
             {/* Experience Card */}
             <div
-              className={`bg-[#26292a] p-6 rounded-lg w-[85%] ml-16 sm:ml-0 sm:w-5/12 ${
-                index % 2 === 0 ? "ml-16" : "mr-2"
+              className={`glass-panel p-8 rounded-2xl w-[85%] ml-20 sm:ml-0 sm:w-5/12 border-white/5 hover:border-blue-500/30 transition-all duration-300 group hover:bg-white/5 ${
+                index % 2 === 0 ? "sm:ml-16" : "sm:mr-16"
               }`}
             >
-              <h2 className="text-[#b84042] text-xl font-semibold ">
+              <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                 {exp.company}
               </h2>
-              <h3 className="flex items-center gap-2 font-medium mt-2">
-                <Briefcase size={18} className="" /> {exp.role}
-              </h3>
-              <p className="flex items-center gap-2 mt-1">
-                <Calendar size={18} /> {exp.date}
-              </p>
-              <ul className="mt-3 list-disc ml-5 space-y-1">
+              <div className="flex flex-wrap gap-4 items-center mt-2 text-sm text-neutral-400">
+                <h3 className="flex items-center gap-1.5 font-medium">
+                  <Briefcase size={14} /> {exp.role}
+                </h3>
+                <span className="hidden sm:block w-1 h-1 rounded-full bg-neutral-600"></span>
+                <p className="flex items-center gap-1.5">
+                  <Calendar size={14} /> {exp.date}
+                </p>
+              </div>
+
+              <ul className="mt-6 space-y-3">
                 {exp.details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
+                  <li
+                    key={idx}
+                    className="text-neutral-300 text-sm leading-relaxed flex gap-3"
+                  >
+                    <span className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-blue-500/50"></span>
+                    {detail}
+                  </li>
                 ))}
               </ul>
             </div>

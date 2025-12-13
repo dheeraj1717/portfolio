@@ -1,105 +1,44 @@
 "use client";
 
-import { BackgroundBeams } from "@/app/ui/background-beams";
-import { useState, useEffect } from "react";
-import {
-  SiReact,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiMongodb,
-  SiMysql,
-  SiGithub,
-} from "react-icons/si";
+// import { BackgroundBeams } from "@/app/ui/background-beams"; // Not used anymore
+import { Spotlight } from "../ui/Background";
+// import { TextRevealCard } from "../ui/text-reveal-card";
 
 export const Hero = () => {
-  const words = [
-    { name: "React", icon: <SiReact /> },
-    { name: "HTML", icon: <SiHtml5 /> },
-    { name: "CSS", icon: <SiCss3 /> },
-    { name: "JavaScript", icon: <SiJavascript /> },
-    { name: "Next.js", icon: <SiNextdotjs /> },
-    { name: "Node.js", icon: <SiNodedotjs /> },
-    { name: "MongoDB", icon: <SiMongodb /> },
-    { name: "MySQL", icon: <SiMysql /> },
-    { name: "GitHub", icon: <SiGithub /> },
-  ];
-
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
-
-  useEffect(() => {
-    const currentWord = words[currentWordIndex].name;
-
-    const typingSpeed = isDeleting ? 50 : 100;
-    const nextStepDelay = isDeleting ? 50 : 150;
-    const waitBeforeDelete = 1000;
-
-    const typeEffect = setTimeout(
-      () => {
-        if (!isDeleting) {
-          setDisplayedText(currentWord.substring(0, charIndex + 1));
-          setCharIndex((prev) => prev + 1);
-
-          if (charIndex + 1 === currentWord.length) {
-            setTimeout(() => setIsDeleting(true), waitBeforeDelete);
-          }
-        } else {
-          setDisplayedText(currentWord.substring(0, charIndex - 1));
-          setCharIndex((prev) => prev - 1);
-
-          if (charIndex === 0) {
-            setIsDeleting(false);
-            setCurrentWordIndex((prev) => (prev + 1) % words.length);
-          }
-        }
-      },
-      isDeleting ? nextStepDelay : typingSpeed
-    );
-
-    return () => clearTimeout(typeEffect);
-  }, [charIndex, isDeleting, currentWordIndex]);
-
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-14 sm:px-16 md:px-32 gap-16 min-h-[70vh]">
-      <div className="md:w-1/2 flex justify-end items-end flex-col">
-        <div className="max-w-[450px] z-10">
-          <h1 className="text-[24px] font-bold leading-7">
-            Hello, <br /> My name is Dheeraj
+    <div className="flex flex-col items-center justify-center min-h-screen relative w-full overflow-hidden py-20 md:py-0">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center px-4">
+          <div className="inline-block mb-4 px-3 py-1 rounded-full border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm">
+             <span className="text-neutral-300 text-sm font-medium tracking-wide">Available for new projects</span>
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-200 to-neutral-500 tracking-tight mb-6">
+            Dheeraj Jangid
           </h1>
-          <div className="leading-6 tracking-wide mt-5 text-[#fff9] text-[14px] sm:text-[16px] flex flex-col gap-2">
-            <p>
-              I’m a Full Stack Developer passionate about creating dynamic,
-              high-performance web applications.I specialize in building
-              seamless, user-friendly digital experiences.
-            </p>
-            <p>
-              I thrive on solving complex challenges and turning ideas into
-              reality through clean, efficient code. Whether it’s frontend
-              finesse or backend logic, I love crafting solutions that make an
-              impact.
-            </p>
-          </div>
-          <div className="mt-5">
-            <a href="https://drive.google.com/file/d/1AHRjteTIHkaqP0iS-Vh87HhvsxMREEkp/view" target="_blank" className="mt-5 py-2 px-4 border font-medium border-[#fff9] hover:bg-[#fff] hover:text-black rounded-sm hover:transition-all delay-100 inline-block cursor-pointer">
-              Resume
-            </a>
-          </div>
-        </div>
-      </div>
+          
+          <h2 className="text-2xl md:text-4xl font-medium mb-8 max-w-2xl text-blue-500">
+            Full Stack Developer
+          </h2>
 
-      {/* Typewriter Effect Section with Icons */}
-      <div className="md:w-1/2 flex justify-center items-center text-6xl font-medium text-blue-500 gap-4">
-        {words[currentWordIndex].icon}
-        {displayedText}
-        <span className="blinking-cursor">|</span>
+          <p className="text-neutral-500 text-base md:text-lg leading-relaxed max-w-xl mb-10">
+              Transforming conceptual ideas into high-performance, visually stunning digital realities. 
+              Specializing in Next.js, React, and modern web architectures.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-5">
+             <a href="#projects" className="px-8 py-3.5 rounded-full bg-white text-black font-bold hover:bg-neutral-200 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+               View Works
+             </a>
+             <a href="#contact" className="px-8 py-3.5 rounded-full border border-white/10 bg-white/5 text-white font-medium hover:bg-white/10 transition-all backdrop-blur-sm">
+               Contact Me
+             </a>
+          </div>
       </div>
-
-      <BackgroundBeams />
     </div>
   );
 };

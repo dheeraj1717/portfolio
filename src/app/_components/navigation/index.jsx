@@ -8,8 +8,8 @@ export const Navigation = () => {
     const sections = document.querySelectorAll("section");
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      rootMargin: "-10% 0px -40% 0px", // Detect when section is in upper-middle part of screen
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -37,18 +37,18 @@ export const Navigation = () => {
   };
 
   return (
-    <ul className="fixed top-1/2 transform -translate-y-1/2 space-y-4 left-[10px] sm:left-[20px]">
-      {["profile", "experience", "projects", "contact"].map((section) => (
+    <ul className="fixed top-1/2 transform -translate-y-1/2 space-y-6 left-[20px] z-50 hidden md:block">
+      {["profile", "skills", "experience", "projects", "contact"].map((section) => (
         <li
           key={section}
-          className="cursor-pointer"
+          className="cursor-pointer group flex items-center gap-4"
           onClick={() => handleNavigation(section)}
         >
           <span
-            className={`block transition-all duration-300 ${
+            className={`block transition-all duration-500 rounded-full ${
               activeSection === section
-                ? "w-8 sm:w-10 h-[2px] bg-white" 
-                : "w-6 hover:w-6 sm:hover:w-8 h-[2px] bg-gray-400 opacity-50" 
+                ? "w-1 h-8 bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)]" 
+                : "w-1 h-4 bg-neutral-600 group-hover:bg-neutral-400 group-hover:h-6" 
             } `} 
           />
         </li>
