@@ -11,7 +11,7 @@ export const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setProjects(projectsData)
+    setProjects(projectsData);
   }, []);
 
   return (

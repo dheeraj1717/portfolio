@@ -25,14 +25,6 @@ export const Hero = () => {
         style={{ y, opacity, scale }}
         className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center px-4"
       >
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-4 px-3 py-1 rounded-full border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm"
-          >
-             <span className="text-neutral-300 text-sm font-medium tracking-wide">Available for new projects</span>
-          </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
