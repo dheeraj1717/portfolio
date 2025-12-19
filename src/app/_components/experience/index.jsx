@@ -1,6 +1,21 @@
+"use client";
 import { Briefcase, Calendar } from "lucide-react";
+import { motion, useScroll, useSpring } from "motion/react";
+import { useRef } from "react";
 
 export const Experience = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"],
+  });
+
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   const experiences = [
     {
       company: "The Thinktech",
@@ -39,19 +54,32 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="mx-auto py-5 sm:py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
-      <h1 className="text-center text-4xl sm:text-5xl font-bold mb-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+    <div ref={containerRef} className="mx-auto py-5 sm:py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
+      <motion.h1 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-4xl sm:text-5xl font-bold mb-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+      >
         Experience
-      </h1>
+      </motion.h1>
 
-      {/* Central Vertical Line */}
       <div className="relative">
-        <div className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent"></div>
-        <div className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-blue-400 blur-sm"></div>
+        {/* Animated Central Vertical Line */}
+        <motion.div 
+          style={{ scaleY, originY: 0 }}
+          className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-blue-500 via-blue-500 to-transparent z-0"
+        ></motion.div>
+        <div className="absolute top-0 left-8 sm:left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-blue-400 blur-sm opacity-30"></div>
 
         {experiences.map((exp, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, delay: index * 0.1 }}
             className={`relative mb-16 flex ${
               index % 2 === 0 ? "sm:flex-row-reverse" : "flex-row"
             } items-center`}
@@ -92,7 +120,7 @@ export const Experience = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
