@@ -54,10 +54,14 @@ export const Projects = () => {
                     as="a"
                     href={project.demo}
                     target="__blank"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white text-xs font-bold hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 transform hover:scale-105 active:scale-95 group/btn"
                   >
                     <div className="flex items-center gap-2">
-                      <FaTowerBroadcast /> Try now →
+                      <FaTowerBroadcast className="group-hover/btn:animate-pulse" />
+                      Try now
+                      <span className="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">
+                        →
+                      </span>
                     </div>
                   </CardItem>
                   <CardItem
@@ -65,7 +69,7 @@ export const Projects = () => {
                     as="a"
                     href={project.github}
                     target="__blank"
-                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold hover:opacity-80 transition-all duration-300 transform hover:scale-105 active:scale-95"
                   >
                     <div className="flex items-center gap-2">
                       <BiLogoGithub /> GitHub
