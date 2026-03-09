@@ -16,7 +16,7 @@ export const Projects = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto py-10 px-4">
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -35,20 +35,20 @@ export const Projects = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <CardContainer
-              className="inter-var border border-white/10 hover:border-blue-500/70 transition-all duration-300 p-6 rounded-xl"
+              className="inter-var border border-white/5 hover:border-blue-500/50 transition-all duration-300 p-6 rounded-xl bg-transparent"
             >
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black w-auto sm:w-[26rem] h-auto">
+              <CardBody className="bg-black/40 backdrop-blur-sm border border-white/10 relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] w-auto sm:w-[26rem] h-auto rounded-xl p-6">
                 <div className="w-full h-full flex flex-col">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-neutral-600 dark:text-white"
+                    className="text-xl font-bold text-white"
                   >
                     {project.title}
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                    className="text-neutral-400 text-sm max-w-sm mt-2"
                   >
                     {project.description}
                   </CardItem>
