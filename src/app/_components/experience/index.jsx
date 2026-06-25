@@ -17,41 +17,41 @@ export const Experience = () => {
   });
 
   const experiences = [
-    {
-      company: "The Thinktech",
-      role: "Associate Software Developer",
-      date: "June 2025 - Present",
-      details: [
-        "Contributing to the development of two large-scale multilingual platforms – a Learning Management System (LMS) and an Insurance CRM supporting multiple insurance products, designed for 20,000+ insurance agents.",
-        "Building responsive and scalable frontend applications using React, Vite, TypeScript, and Tailwind CSS.",
-        "Ensuring application quality through manual testing and automated unit/integration tests with Jest and React Testing Library.",
-        "Involved in requirement gathering and clarifying product needs.",
-        "Preparing training documents and onboarding materials for internal teams.",
-      ],
-    },
-    {
-      company: "Virtust Technologies",
-      role: "Front End Developer",
-      date: "July 2024 - Sept 2024",
-      details: [
-        "Developed a DEX interface with React.js and Tailwind CSS, integrated with the Polygon blockchain for transaction handling.",
-        "Implemented wallet connections, token swaps, and real-time transaction monitoring.",
-        "Built a CRM with multi-step forms, external API integration, and user management.",
-        "Created a multi-page Next.js app, optimized for performance and SEO.",
-      ],
-    },
-    {
-      company: "Veritus.ai",
-      role: "Front End Developer Intern",
-      date: "Dec 2023 - Mar 2024",
-      details: [
-        "Developed UI components in React.js and Tailwind CSS for a complete interface redesign.",
-        "Utilized Recoil for efficient state management.",
-        "Refactored codebase for improved maintainability.",
-        "Collaborated with design team to implement UI/UX designs accurately.",
-      ],
-    },
-  ];
+  {
+    company: "The Thinktech",
+    role: "Associate Software Developer",
+    date: "June 2025 - Present",
+    details: [
+      "Developed multi-language suite of 2 insurance portals and an LMS serving 20,000+ insurance agents across multiple insurance products.",
+      "Developed an internal document management system with categorized storage and role-based document visibility (RBAC) for a separate enterprise client.",
+      "Implemented backend features including authentication, RBAC, and API integration using Node.js, supporting role-based workflows across agent, manager, and admin roles.",
+      "Built scalable frontend modules using React, TypeScript, and Tailwind CSS; maintained quality with Jest and Manual Testing.",
+      "Authored technical documentation and user manuals for internal teams and end clients, covering API references, feature workflows, and onboarding guides."
+    ],
+  },
+  {
+    company: "Virtust Technologies",
+    role: "Front End Developer",
+    date: "July 2024 - Sept 2024",
+    details: [
+      "Developed a DEX interface with React.js and Tailwind CSS, integrated with the Polygon blockchain for transaction handling.",
+      "Implemented wallet connections, token swaps, and real-time transaction monitoring.",
+      "Built a CRM with multi-step forms, external API integration, and user management.",
+      "Created a multi-page Next.js app, optimized for performance and SEO.",
+    ],
+  },
+  {
+    company: "Veritus.ai",
+    role: "Front End Developer Intern",
+    date: "Dec 2023 - Mar 2024",
+    details: [
+      "Developed UI components in React.js and Tailwind CSS for a complete interface redesign.",
+      "Utilized Recoil for efficient state management.",
+      "Refactored codebase for improved maintainability.",
+      "Collaborated with design team to implement UI/UX designs accurately.",
+    ],
+  },
+];
 
   return (
     <div ref={containerRef} className="mx-auto py-5 sm:py-20 px-4 max-w-[1200px] mt-12 lg:mt-0">
