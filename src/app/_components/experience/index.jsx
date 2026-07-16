@@ -22,12 +22,13 @@ export const Experience = () => {
     role: "Associate Software Developer",
     date: "June 2025 - Present",
     details: [
-      "Developed multi-language suite of 2 insurance portals and an LMS serving 20,000+ insurance agents across multiple insurance products.",
-      "Developed an internal document management system with categorized storage and role-based document visibility (RBAC) for a separate enterprise client.",
-      "Implemented backend features including authentication, RBAC, and API integration using Node.js, supporting role-based workflows across agent, manager, and admin roles.",
-      "Built scalable frontend modules using React, TypeScript, and Tailwind CSS; maintained quality with Jest and Manual Testing.",
-      "Authored technical documentation and user manuals for internal teams and end clients, covering API references, feature workflows, and onboarding guides."
-    ],
+  "Implemented JWT-based authentication in Node.js with refresh token rotation, reuse detection, and secure invalidation, alongside hierarchical RBAC middleware for Agent, Manager, and Admin roles.",
+  "Developed high-performance REST APIs for dynamic insurance premium calculations by optimizing database queries and business rule evaluation across age bands, destinations, and policy variants.",
+  "Designed and implemented REST APIs for course management, assessments, certificate generation, user administration, and progress tracking, supporting over 20,000 licensed insurance agents.",
+  "Built a secure document management service using Node.js, and AWS S3, implementing server-side file stream validation, strict MIME-type checks, and role-based data isolation.",
+  "Developed responsive multi-step insurance workflows and dashboards using React, TypeScript, and Redux Toolkit, integrating real-time premium calculation APIs for instant feedback.",
+  "Optimized frontend data-fetching patterns by implementing efficient pagination, and state synchronization strategies, reducing redundant API requests and improving dashboard load times."
+],
   },
   {
     company: "Virtust Technologies",
